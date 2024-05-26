@@ -3,6 +3,7 @@ package com.study.cleanarch.bookpal.account.domain;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Value;
 
 import java.time.LocalDateTime;
 
@@ -56,6 +57,11 @@ public class Account {
 
         this.activityWindow.addActivity(deposit);
         return true;
+    }
+
+    @Value
+    public static class AccountId {
+        private Long value;
     }
 }
 
